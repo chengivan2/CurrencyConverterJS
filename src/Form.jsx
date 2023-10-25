@@ -43,7 +43,7 @@ const ConversionForm = () => {
         currencies: targetCurrency
       }).then(response => {
         // Handle the response here
-        console.log(response.data[targetCurrency]);
+        //console.log(response.data[targetCurrency]); /*Use this line to test your response results
     
         // You can store the response in a variable if needed
         //const conversionData = response;
