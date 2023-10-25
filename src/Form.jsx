@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Freecurrencyapi from '@everapi/freecurrencyapi-js';
+import './Form.css'
 
 const currencyOptions = [
   'EUR', 'USD', 'JPY', 'BGN', 'CZK', 'DKK', 'GBP', 'HUF', 'PLN',
@@ -13,8 +14,8 @@ const freecurrencyapi = new Freecurrencyapi('YOUR-API-KEY');
 const ConversionForm = () => {
   const [formData, setFormData] = useState({
     amount: '',
-    baseCurrency: 'EUR',
-    targetCurrency: 'USD',
+    baseCurrency: 'USD',
+    targetCurrency: 'EUR',
   });
   const [result, setResult] = useState(null);
 
@@ -37,12 +38,24 @@ const ConversionForm = () => {
 
   const convertCurrency = (amount, baseCurrency, targetCurrency) => {
     // Implement your currency conversion logic here
-    // For simplicity, let's assume a simple conversion rate of 1 base currency unit = 2 target currency units
-    return amount * 2;
+    freecurrencyapi.latest({
+        base_currency: baseCurrency,
+        currencies: targetCurrency
+      }).then(response => {
+        // Handle the response here
+        console.log(response.data[targetCurrency]);
+    
+        // You can store the response in a variable if needed
+        //const conversionData = response;
+    
+        setResult(response.data[targetCurrency] * amount); // Set the result in state for display
+      }).catch(error => {
+        console.error('API request failed:', error);
+      });
   };
 
   return (
-    <div>
+    <div className="glass-form-container">
       <h1>Currency Conversion</h1>
       <form onSubmit={handleSubmit} className="glass-form">
         <label>
