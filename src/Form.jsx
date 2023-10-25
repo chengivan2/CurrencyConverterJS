@@ -58,8 +58,9 @@ const ConversionForm = () => {
     <div className="glass-form-container">
       <h1>Currency Conversion</h1>
       <form onSubmit={handleSubmit} className="glass-form">
+        <div className='input-container'>
         <label>
-          Amount:
+          Amount: <br/>
           <input
             type="number"
             name="amount"
@@ -67,8 +68,9 @@ const ConversionForm = () => {
             onChange={handleInputChange}
           />
         </label>
+    
         <label>
-          Base Currency:
+          Base Currency: <br/>
           <select
             name="baseCurrency"
             value={formData.baseCurrency}
@@ -81,8 +83,9 @@ const ConversionForm = () => {
             ))}
           </select>
         </label>
+        
         <label>
-          Target Currency:
+          Target Currency: <br/>
           <select
             name="targetCurrency"
             value={formData.targetCurrency}
@@ -95,6 +98,7 @@ const ConversionForm = () => {
             ))}
           </select>
         </label>
+        </div>
         <br/>
         <button type="submit" className="convert-button">Convert</button>
       </form>
