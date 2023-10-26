@@ -8,9 +8,9 @@ const Footer = () => {
         <img src="./ivan-cropped.png" alt="Footer Image" className="footer-image" />
         <ul className="footer-list">
           <li><a target='_blank' href="https://ivanthedev.guru">Ivan the Dev</a></li>
-          <li><a target='_blank' href="">EverAPI</a></li>
+          <li><a target='_blank' href="https://everapi.com/">EverAPI</a></li>
         </ul>
-        <p>&copy; Ivan the Dev</p>
+        <p>&copy; Ivan the Dev 2023</p>
       </div>
     </footer>
   );

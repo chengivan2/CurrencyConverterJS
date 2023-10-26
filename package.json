@@ -1,6 +1,7 @@
 {
   "name": "currencyconverter",
   "private": true,
+  "homepage": "https://convertly.ivanthedev.guru",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

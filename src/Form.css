@@ -1,5 +1,5 @@
 .glass-form-container {
-    background: url('your-blurred-background-image.jpg'); /* Set your background image here */
+    /*background: url('your-blurred-background-image.jpg');  Set your background image here */
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -51,6 +51,10 @@ input, select {
     border: none;
     border-bottom: 2px gray solid;
     background-color: transparent;
+    text-align: center;
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
 }
 
 input:focus, select:focus {
@@ -105,12 +109,16 @@ option {
     }
 
     .glass-form-container {
+        position: relative;
         min-height: 90vh;
         padding-bottom: 2%;
     }
 
     .glass-form {
         padding: 5% 10% 0 10%;
+        position: relative;
+        min-width: 70%;
+       
     }
 
     label {

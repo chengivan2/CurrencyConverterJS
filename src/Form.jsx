@@ -56,16 +56,16 @@ const ConversionForm = () => {
 
   return (
     <div className="glass-form-container">
-      <h1>Currency Conversion</h1>
       <form onSubmit={handleSubmit} className="glass-form">
         <div className='input-container'>
         <label>
-          Amount: <br/>
+          <br/>
           <input
             type="number"
             name="amount"
             value={formData.amount}
             onChange={handleInputChange}
+            placeholder='Amount'
           />
         </label>
     
@@ -102,12 +102,15 @@ const ConversionForm = () => {
         <br/>
         <button type="submit" className="convert-button">Convert</button>
       </form>
-      {result !== null && (
+      {result? (
         <div className="result-container">
           <h2>Conversion Result</h2>
           <p>{formData.amount} {formData.baseCurrency} is equal to {result} {formData.targetCurrency}</p>
         </div>
-      )}
+      ): (
+        <div className="result-container">
+          <p>Please enter an amount</p>
+        </div>)}
     </div>
   );
 };
