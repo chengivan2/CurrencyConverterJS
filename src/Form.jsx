@@ -9,7 +9,7 @@ const currencyOptions = [
   'MYR', 'NZD', 'PHP', 'SGD', 'THB', 'ZAR'
 ];
 
-const freecurrencyapi = new Freecurrencyapi('YOUR-API-KEY');
+const freecurrencyapi = new Freecurrencyapi('fca_live_Q9VD4sItn7YulfJBlDP04PS5UAEPyEOiRyK7prTY');
 
 const ConversionForm = () => {
   const [formData, setFormData] = useState({
@@ -47,8 +47,8 @@ const ConversionForm = () => {
     
         // You can store the response in a variable if needed
         //const conversionData = response;
-    
-        setResult(response.data[targetCurrency] * amount); // Set the result in state for display
+        var final_amount = Number(response.data[targetCurrency]);
+        setResult((final_amount * amount).toFixed(2)); // Set the result in state for display
       }).catch(error => {
         console.error('API request failed:', error);
       });

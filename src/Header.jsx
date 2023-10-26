@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="logo">Your Logo</div>
+      <div className="logo"><a href="#">CONVERTLY</a></div>
       <nav className={`nav ${menuVisible ? 'visible' : ''}`}>
         <button className="menu-toggle" onClick={toggleMenu}>
           Menu
