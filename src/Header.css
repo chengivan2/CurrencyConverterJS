@@ -49,7 +49,6 @@
   /* Media query for responsive design */
 @media screen and (max-width: 768px) {
     .header {
-      flex-direction: column;
       text-align: center;
     }
   

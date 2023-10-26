@@ -9,7 +9,7 @@ const currencyOptions = [
   'MYR', 'NZD', 'PHP', 'SGD', 'THB', 'ZAR'
 ];
 
-const freecurrencyapi = new Freecurrencyapi('fca_live_Q9VD4sItn7YulfJBlDP04PS5UAEPyEOiRyK7prTY');
+const freecurrencyapi = new Freecurrencyapi('API-KEY');
 
 const ConversionForm = () => {
   const [formData, setFormData] = useState({
